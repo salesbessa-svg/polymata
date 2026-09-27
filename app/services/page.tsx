@@ -3,6 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import {
   ArrowDown,
+  ArrowRight,
   ArrowUp,
   Check,
   MapPin,
@@ -12,6 +13,7 @@ import {
   TrendingUp,
   UtensilsCrossed,
 } from "lucide-react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import LocationMap from "@/components/LocationMap";
 import ProductCatalog from "@/components/ProductCatalog";
@@ -51,7 +53,7 @@ const popV: Variants = {
 };
 
 /* =========================================================
-   AÇÕES DE NAVEGAÇÃO (inalteradas)
+   AÇÕES DE NAVEGAÇÃO
 ========================================================= */
 
 /** rola até uma seção respeitando "reduzir movimento" */
@@ -60,7 +62,7 @@ function goTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
 }
 
-/** botão grande e evidente, com área de toque confortável */
+/** botão grande e evidente, com área de toque confortável — usado só quando leva a algo real na própria página */
 function DemoButton({
   target,
   icon,
@@ -83,14 +85,16 @@ function DemoButton({
   );
 }
 
-function SaibaMaisButton() {
+/** link real (não botão decorativo): sempre leva a um destino concreto */
+function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <button
-      type="button"
-      className="w-full rounded-full bg-white px-6 py-2.5 font-medium text-black transition-colors hover:bg-gray-300"
+    <Link
+      href={href}
+      className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-2.5 font-medium text-black transition-colors hover:bg-gray-300"
     >
-      Saiba Mais
-    </button>
+      {children}
+      <ArrowRight size={15} />
+    </Link>
   );
 }
 
@@ -116,7 +120,6 @@ function DesignIllustration() {
   const colors = ["#F87171", "#FBBF24", "#34D399", "#60A5FA", "#C084FC"];
   return (
     <div className="relative flex h-28 items-center justify-center">
-      {/* cartão genérico, ao fundo */}
       <motion.div
         variants={itemV}
         className="absolute left-1/2 top-1/2 flex h-16 w-24 -translate-x-[70%] -translate-y-1/2 -rotate-6 flex-col items-center justify-center gap-1.5 rounded-xl bg-white/10 text-white/40"
@@ -125,7 +128,6 @@ function DesignIllustration() {
         <span className="text-[9px] uppercase tracking-wide">genérico</span>
       </motion.div>
 
-      {/* identidade autoral, em destaque */}
       <motion.div
         variants={popV}
         className="relative z-10 flex h-20 w-28 translate-x-[8%] rotate-3 flex-col items-center justify-center gap-1.5 rounded-xl shadow-lg"
@@ -137,7 +139,6 @@ function DesignIllustration() {
         <span className="text-[9px] font-medium uppercase tracking-wide text-white/90">sua marca</span>
       </motion.div>
 
-      {/* paleta de cores */}
       <div className="absolute -bottom-1 left-1/2 flex -translate-x-1/2 gap-1.5">
         {colors.map((c) => (
           <motion.span
@@ -230,6 +231,7 @@ function StrategyIllustration() {
 ========================================================= */
 
 function ServiceCard({
+  anchorId,
   index,
   icon,
   title,
@@ -239,6 +241,7 @@ function ServiceCard({
   bullets,
   footer,
 }: {
+  anchorId: string;
   index: string;
   icon: React.ReactNode;
   title: string;
@@ -250,11 +253,12 @@ function ServiceCard({
 }) {
   return (
     <motion.div
+      id={anchorId}
       variants={cardV}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-60px" }}
-      className="flex flex-col justify-between rounded-2xl bg-neutral-800 p-7 shadow-lg md:p-8"
+      className="scroll-mt-24 flex flex-col justify-between rounded-2xl bg-neutral-800 p-7 shadow-lg md:p-8"
     >
       <div>
         <motion.div variants={itemV} className="flex items-center justify-between">
@@ -323,6 +327,7 @@ export default function Services() {
       <section id="servicos" className="scroll-mt-20 bg-neutral-900 px-6 pb-24 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3 md:gap-10">
           <ServiceCard
+            anchorId="design"
             index="01"
             icon={<Palette size={18} />}
             title="Design de Produto"
@@ -334,10 +339,13 @@ export default function Services() {
               "Paleta de cores memorável",
               "Diferenciação de produtos genéricos gerados por IA",
             ]}
-            footer={<SaibaMaisButton />}
+            footer={
+              <FooterLink href="/contato">Conversar sobre este serviço</FooterLink>
+            }
           />
 
           <ServiceCard
+            anchorId="credibilidade"
             index="02"
             icon={<ShieldCheck size={18} />}
             title="Credibilidade"
@@ -363,6 +371,7 @@ export default function Services() {
           />
 
           <ServiceCard
+            anchorId="estrategia"
             index="03"
             icon={<TrendingUp size={18} />}
             title="Estratégia Regionalizada"
@@ -374,7 +383,7 @@ export default function Services() {
               "Identificação de oportunidades locais",
               "Rede de contatos estratégicos",
             ]}
-            footer={<SaibaMaisButton />}
+            footer={<FooterLink href="/projetos">Conhecer os projetos</FooterLink>}
           />
         </div>
       </section>
