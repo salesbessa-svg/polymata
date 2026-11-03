@@ -14,18 +14,18 @@ const services = [
     icon: Palette,
     accent: "#F97316",
     title: "Design de Produto",
-    short: "Uma identidade autoral, longe do genérico gerado por IA.",
+    short: "Design orgânico e marcante, longe do genérico gerado por IA.",
     detail:
-      "Criamos uma logomarca exclusiva e uma paleta de cores que fazem sua marca ser reconhecida à primeira vista — em vez de se misturar aos concorrentes.",
+      "Em um mundo onde muitos usam IA para apresentar seus serviços, a realidade se destaca e agrega valor. Criamos uma identidade autoral para sua empresa, com toda a ciência aplicada ao marketing.",
   },
   {
     id: "credibilidade",
     icon: MapPin,
     accent: "#34D399",
     title: "Credibilidade",
-    short: "Prova social exatamente onde seu cliente já está procurando.",
+    short: "Tá começando? Sabemos o que preocupa o cliente e como ele valida seu preço.",
     detail:
-      "Fotos profissionais, avaliações reais e um catálogo sempre atualizado no mapa e nos apps de busca — o cliente encontra e já confia antes de falar com você.",
+      "Construímos a prova social do seu negócio: fotografias ultraprofissionais, filmagens cinematográficas, catálogo audiovisual, perfil excelente no Google Maps e impulsionamento estratégico online.",
   },
   {
     id: "estrategia",

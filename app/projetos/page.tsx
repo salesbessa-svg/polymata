@@ -5,8 +5,10 @@ import {
   ArrowRight,
   Coins,
   GraduationCap,
+  Handshake,
   Landmark,
   Network,
+  PartyPopper,
   Users,
 } from "lucide-react";
 import Link from "next/link";
@@ -29,19 +31,19 @@ const pillars = [
     icon: Users,
     accent: "#F97316",
     title: "Networking Empresarial",
-    text: "Aproximamos empresários da mesma região e do mesmo momento de crescimento, criando conexões reais — não apenas contatos trocados em um evento.",
+    text: "Funciona por meio de uma análise semestral do andamento da sua empresa. Te colocamos onde você não sabia que podia chegar, aprimorando seu modelo de negócio e suas especificidades.",
   },
   {
     icon: Network,
     accent: "#34D399",
     title: "Comunidade",
-    text: "Um espaço contínuo de troca entre negócios locais, onde experiência, indicação e apoio mútuo substituem a concorrência silenciosa.",
+    text: "Um espaço para discutirmos soluções e contratos facilitados com fornecedores e contratantes do seu serviço. Uma rede mesmo!",
   },
   {
     icon: Landmark,
     accent: "#60A5FA",
-    title: "Elisão Fiscal",
-    text: "Orientação sobre estruturas associativas e cooperativas que permitem operar com mais eficiência tributária, sempre dentro da lei.",
+    title: "Planejamento Tributário",
+    text: "Analisamos onde você perde dinheiro e mostramos como reduzir os impostos. Diminuímos custos de operação como água, luz e ingredientes, e enxugamos onde mais vaza dinheiro da sua receita sem que você perceba.",
   },
   {
     icon: Coins,
@@ -58,26 +60,24 @@ const pillars = [
 ];
 
 /* =========================================================
-   FORMATOS DE WORKSHOP
+   REDE DE CONTATOS E WORKSHOPS
 ========================================================= */
 
-const workshops = [
-  {
-    title: "Encontros de Networking",
-    text: "Rodadas mensais entre empresas parceiras para apresentar necessidades, oportunidades e fechar negócios entre si.",
-  },
-  {
-    title: "Rodas de Comunidade",
-    text: "Conversas abertas sobre desafios reais do dia a dia do negócio, com trocas de experiência entre donos de empresas semelhantes.",
-  },
-  {
-    title: "Planejamento Tributário",
-    text: "Sessões com especialistas convidados sobre estruturas associativas e como elas podem reduzir a carga tributária legalmente.",
-  },
-  {
-    title: "Acesso a Capital",
-    text: "Apresentação de linhas de crédito, editais públicos e investidores interessados em negócios da região.",
-  },
+const network = [
+  "Gestores empresariais",
+  "Associações sociais",
+  "Associações atléticas",
+  "Bancos",
+  "Advogados",
+];
+
+const workshopTopics = [
+  "Escalabilidade empresarial",
+  "Elisão fiscal",
+  "Investimento",
+  "Estratégia comercial",
+  "Automação de processos",
+  "Redução de custos",
 ];
 
 /* =========================================================
@@ -97,8 +97,8 @@ export default function Projetos() {
         />
         <RevealBlock delay={0.15}>
           <p className="mx-auto max-w-2xl text-lg text-white/70">
-            Além de construir marcas, construímos o ecossistema em volta delas: uma rede de empresas que crescem
-            juntas, em vez de competir sozinhas.
+            Além de construirmos marcas por todo o Estado de São Paulo, fazemos com que cada empresa nova ganhe seu
+            espaço na nossa rede de contatos.
           </p>
         </RevealBlock>
       </section>
@@ -131,40 +131,95 @@ export default function Projetos() {
         </div>
       </section>
 
-      {/* ---------- WORKSHOPS ---------- */}
+      {/* ---------- REDE DE CONTATOS ---------- */}
       <section className="bg-black px-6 py-20 md:px-8 md:py-28">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl text-center">
           <RevealText
-            text="Encontros e workshops"
+            text="Uma rede inteira esperando por você"
             as="h2"
-            className="text-3xl font-light leading-tight md:text-4xl"
+            className="mx-auto max-w-3xl text-3xl font-light leading-tight md:text-4xl"
           />
           <RevealBlock delay={0.15}>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/70">
-              Formatos pensados para transformar a rede em resultado prático, não apenas em contatos guardados.
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
+              Possuímos uma rede de contatos com gestores empresariais, associações sociais, associações atléticas,
+              bancos e advogados esperando você entrar nessa.
             </p>
           </RevealBlock>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {workshops.map((w) => (
-              <motion.div
-                key={w.title}
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            {network.map((n) => (
+              <motion.span
+                key={n}
                 variants={cardV}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, margin: "-60px" }}
-                className="rounded-2xl border border-white/10 p-7"
+                viewport={{ once: true }}
+                className="rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 text-sm text-white/85"
               >
-                <h3 className="text-lg font-semibold text-white">{w.title}</h3>
-                <p className="mt-2 text-[14.5px] leading-relaxed text-white/60">{w.text}</p>
-              </motion.div>
+                {n}
+              </motion.span>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ---------- ENCONTROS E WORKSHOPS ---------- */}
+      <section className="bg-neutral-900 px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-6xl">
+          <RevealText
+            text="Não pode faltar festa!"
+            as="h2"
+            className="text-3xl font-light leading-tight md:text-4xl"
+          />
+          <RevealBlock delay={0.15}>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/70">
+              Realizamos encontros exclusivos para quem se torna Polymata.
+            </p>
+          </RevealBlock>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <motion.div
+              variants={cardV}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-60px" }}
+              className="rounded-2xl bg-neutral-800 p-7 shadow-lg"
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#FBBF24] text-black">
+                <PartyPopper size={18} />
+              </span>
+              <h3 className="mt-5 text-xl font-semibold text-white">Workshop com especialistas do ramo</h3>
+              <p className="mt-2 text-[14.5px] leading-relaxed text-white/60">Temas como:</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {workshopTopics.map((t) => (
+                  <span key={t} className="rounded-full bg-white/[0.07] px-3.5 py-1.5 text-[13px] text-white/85">
+                    {t}
+                  </span>
+                ))}
+                <span className="rounded-full px-1 py-1.5 text-[13px] text-white/50">e muito mais</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={cardV}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-60px" }}
+              className="rounded-2xl bg-neutral-800 p-7 shadow-lg"
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#34D399] text-black">
+                <Handshake size={18} />
+              </span>
+              <h3 className="mt-5 text-xl font-semibold text-white">A cooperação fortalece!</h3>
+              <p className="mt-2 text-[14.5px] leading-relaxed text-white/60">
+                Muitos empresários trabalham com tentativa e erro. Aqui nós fazemos você aprender antes de errar.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ---------- CTA ---------- */}
-      <section className="bg-neutral-900 px-6 py-24 text-center md:px-8 md:py-28">
+      <section className="bg-black px-6 py-24 text-center md:px-8 md:py-28">
         <RevealText
           text="Quer fazer parte da rede?"
           as="h2"

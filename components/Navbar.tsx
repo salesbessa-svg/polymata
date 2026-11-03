@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Logo from "./Logo"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,13 +14,16 @@ export default function Navbar() {
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 h-[68px] sm:h-[72px] flex items-center justify-between">
 
         {/* LOGO */}
-        <Link
-          href="/"
-          onClick={() => setIsOpen(false)}
-          className="text-white text-lg sm:text-xl tracking-[0.20em] sm:tracking-[0.25em] font-light hover:text-white/80 transition"
-        >
-          POLYMATA
-        </Link>
+        <div className="flex items-center gap-3">
+          <Logo size={30} background="dark" onClick={() => setIsOpen(false)} />
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="text-white text-lg sm:text-xl tracking-[0.20em] sm:tracking-[0.25em] font-light hover:text-white/80 transition"
+          >
+            POLYMATA
+          </Link>
+        </div>
 
         {/* MENU DESKTOP */}
         <nav className="hidden md:flex items-center gap-8 lg:gap-10 text-white/80 text-sm tracking-widest">
@@ -36,6 +40,13 @@ export default function Navbar() {
             className="hover:text-white transition"
           >
             PROJETOS
+          </Link>
+
+          <Link
+            href="/newsletter"
+            className="hover:text-white transition"
+          >
+            NEWSLETTER
           </Link>
 
           <Link
@@ -129,6 +140,14 @@ export default function Navbar() {
             className="border-b border-white/10 py-5 text-sm tracking-[0.2em] text-white/80 transition hover:text-white"
           >
             PROJETOS
+          </Link>
+
+          <Link
+            href="/newsletter"
+            onClick={() => setIsOpen(false)}
+            className="border-b border-white/10 py-5 text-sm tracking-[0.2em] text-white/80 transition hover:text-white"
+          >
+            NEWSLETTER
           </Link>
 
           <Link

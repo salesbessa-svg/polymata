@@ -3,13 +3,13 @@
 import { RevealText, RevealBlock } from "./Reveal"
 
 type VideoTextSectionProps = {
-  /** ex: "/video/comunidade" — o componente busca .webm e .mp4 com esse prefixo */
+  /** ex: "/video/comunidade": o componente busca .webm e .mp4 com esse prefixo */
   videoBase: string
   eyebrow?: string
   title: string
   description: string
   align?: "left" | "center" | "right"
-  /** 0 a 1 — quanto mais alto, mais escuro o vídeo fica atrás do texto */
+  /** 0 a 1: quanto mais alto, mais escuro o vídeo fica atrás do texto */
   overlay?: number
   children?: React.ReactNode
 }
@@ -30,40 +30,132 @@ export default function VideoTextSection({
   children,
 }: VideoTextSectionProps) {
   return (
-    <section className="relative flex min-h-[90vh] w-full items-center overflow-hidden bg-black">
+    <section
+      className="
+        relative
+        flex
+        h-[100svh]
+        min-h-[100svh]
+        w-full
+        items-center
+        justify-center
+        overflow-hidden
+        bg-black
+      "
+    >
+      {/* VÍDEO DE FUNDO */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 h-full w-full object-cover"
+        preload="metadata"
+        className="
+          absolute
+          inset-0
+          h-full
+          w-full
+          object-cover
+        "
       >
         <source src={`${videoBase}.webm`} type="video/webm" />
         <source src={`${videoBase}.mp4`} type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-black" style={{ opacity: overlay }} />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
+      {/* ESCURECIMENTO DO VÍDEO */}
+      <div
+        className="absolute inset-0 bg-black"
+        style={{ opacity: overlay }}
+      />
 
-      <div className={`relative z-10 mx-auto flex w-full max-w-4xl flex-col px-6 md:px-8 ${alignMap[align]}`}>
+      {/* GRADIENTE PARA DAR PROFUNDIDADE */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-black
+          via-black/10
+          to-black/50
+        "
+      />
+
+      {/* CONTEÚDO */}
+      <div
+        className={`
+          relative
+          z-10
+          mx-auto
+          flex
+          h-full
+          w-full
+          max-w-4xl
+          flex-col
+          justify-center
+          px-6
+          py-24
+          md:px-8
+          md:py-28
+          ${alignMap[align]}
+        `}
+      >
+        {/* EYEBROW */}
         {eyebrow && (
           <RevealBlock>
-            <span className="mb-4 text-sm font-medium tracking-[0.3em] text-white/50">{eyebrow}</span>
+            <span
+              className="
+                mb-4
+                block
+                text-xs
+                font-medium
+                uppercase
+                tracking-[0.3em]
+                text-white/50
+                sm:text-sm
+              "
+            >
+              {eyebrow}
+            </span>
           </RevealBlock>
         )}
 
+        {/* TÍTULO */}
         <RevealText
           text={title}
           as="h2"
-          className="text-4xl font-light leading-tight tracking-wide text-white md:text-6xl"
+          className="
+            max-w-4xl
+            text-4xl
+            font-light
+            leading-[1.05]
+            tracking-wide
+            text-white
+            sm:text-5xl
+            md:text-6xl
+          "
         />
 
-        <RevealBlock delay={0.25} className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+        {/* DESCRIÇÃO */}
+        <RevealBlock
+          delay={0.25}
+          className="
+            mt-6
+            max-w-xl
+            text-base
+            leading-relaxed
+            text-white/70
+            sm:text-lg
+          "
+        >
           <p>{description}</p>
         </RevealBlock>
 
+        {/* BOTÃO / CONTEÚDO EXTRA */}
         {children && (
-          <RevealBlock delay={0.4} className="mt-8">
+          <RevealBlock
+            delay={0.4}
+            className="mt-8 shrink-0"
+          >
             {children}
           </RevealBlock>
         )}

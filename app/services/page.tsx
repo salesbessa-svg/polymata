@@ -7,6 +7,7 @@ import {
   ArrowUp,
   Check,
   MapPin,
+  Sparkles,
   Palette,
   ShieldCheck,
   Star,
@@ -21,8 +22,8 @@ import ProductCatalog from "@/components/ProductCatalog";
 const mapPoints = [
   "Perfil completo nas buscas e no mapa",
   "Avaliações positivas que geram confiança",
-  "Fotos de altíssima qualidade dos seus produtos e serviços",
-  "Catálogo bonito e sempre atualizado",
+  "Fotografias ultraprofissionais dos seus produtos e serviços",
+  "Catálogo audiovisual sempre atualizado",
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -62,7 +63,7 @@ function goTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
 }
 
-/** botão grande e evidente, com área de toque confortável — usado só quando leva a algo real na própria página */
+/** botão grande e evidente, com área de toque confortável: usado só quando leva a algo real na própria página */
 function DemoButton({
   target,
   icon,
@@ -76,10 +77,10 @@ function DemoButton({
     <button
       type="button"
       onClick={() => goTo(target)}
-      className="flex min-h-12 w-full items-center gap-3 rounded-2xl border border-white/15 bg-white/[0.06] px-4 py-3 text-left text-[15px] font-medium text-white transition-colors hover:bg-white/[0.12] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      className="flex min-h-12 w-full min-w-0 items-center gap-3 rounded-2xl border border-white/15 bg-white/[0.06] px-4 py-3 text-left text-[15px] font-medium leading-snug text-white transition-colors hover:bg-white/[0.12] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
     >
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-black">{icon}</span>
-      <span className="flex-1">{children}</span>
+      <span className="min-w-0 flex-1 break-words leading-snug">{children}</span>
       <ArrowDown size={16} className="shrink-0 text-white/60" />
     </button>
   );
@@ -90,36 +91,37 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
   return (
     <Link
       href={href}
-      className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-2.5 font-medium text-black transition-colors hover:bg-gray-300"
+      className="flex min-h-12 w-full min-w-0 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-center font-medium leading-snug text-black transition-colors hover:bg-gray-300 sm:px-6"
     >
-      {children}
-      <ArrowRight size={15} />
+      <span className="min-w-0 break-words text-center">{children}</span>
+      <ArrowRight size={15} className="shrink-0" />
     </Link>
   );
 }
 
 function BackToServices() {
   return (
-    <div className="mt-10 flex justify-center">
+    <div className="mt-10 flex justify-center px-2">
       <button
         type="button"
         onClick={() => goTo("servicos")}
-        className="flex min-h-11 items-center gap-2 rounded-full border border-white/15 px-5 text-sm text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+        className="inline-flex min-h-11 max-w-full min-w-0 items-center justify-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-center text-sm leading-snug text-white/70 transition-colors hover:bg-white/10 hover:text-white sm:px-5"
       >
-        <ArrowUp size={15} /> Voltar aos serviços
+        <ArrowUp size={15} className="shrink-0" />
+          <span className="min-w-0 break-words">Voltar aos serviços</span>
       </button>
     </div>
   );
 }
 
 /* =========================================================
-   ILUSTRAÇÕES — uma pequena cena animada por card
+   ILUSTRAÇÕES: uma pequena cena animada por card
 ========================================================= */
 
 function DesignIllustration() {
   const colors = ["#F87171", "#FBBF24", "#34D399", "#60A5FA", "#C084FC"];
   return (
-    <div className="relative flex h-28 items-center justify-center">
+    <div className="relative flex h-28 min-w-0 items-center justify-center overflow-visible">
       <motion.div
         variants={itemV}
         className="absolute left-1/2 top-1/2 flex h-16 w-24 -translate-x-[70%] -translate-y-1/2 -rotate-6 flex-col items-center justify-center gap-1.5 rounded-xl bg-white/10 text-white/40"
@@ -155,7 +157,7 @@ function DesignIllustration() {
 
 function CredibilityIllustration() {
   return (
-    <div className="flex h-28 flex-col items-center justify-center gap-2.5">
+    <div className="flex h-28 min-w-0 flex-col items-center justify-center gap-2.5">
       <div className="flex items-center gap-1.5">
         <motion.span variants={itemV} className="text-lg font-semibold text-white">
           4,9
@@ -203,7 +205,7 @@ function StrategyIllustration() {
     { x: 170, y: 18 },
   ];
   return (
-    <div className="flex h-28 items-center justify-center">
+    <div className="flex h-28 min-w-0 items-center justify-center overflow-visible">
       <svg viewBox="0 0 180 90" className="h-24 w-full max-w-[230px]" aria-hidden="true">
         <motion.path
           d="M12 74 L46 55 L80 62 L116 30 L150 40 L170 18"
@@ -258,10 +260,10 @@ function ServiceCard({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-60px" }}
-      className="scroll-mt-24 flex flex-col justify-between rounded-2xl bg-neutral-800 p-7 shadow-lg md:p-8"
+      className="scroll-mt-24 flex min-w-0 flex-col justify-between overflow-visible rounded-2xl bg-neutral-800 p-6 shadow-lg sm:p-7 md:p-8"
     >
-      <div>
-        <motion.div variants={itemV} className="flex items-center justify-between">
+      <div className="min-w-0">
+        <motion.div variants={itemV} className="flex min-w-0 items-center justify-between">
           <span
             className="flex h-11 w-11 items-center justify-center rounded-full text-black"
             style={{ backgroundColor: accent }}
@@ -271,23 +273,23 @@ function ServiceCard({
           <span className="text-xs font-medium tracking-[0.2em] text-white/25">{index}</span>
         </motion.div>
 
-        <motion.h2 variants={itemV} className="mb-1.5 mt-5 text-3xl font-semibold">
+        <motion.h2 variants={itemV} className="mb-1.5 mt-5 break-words text-2xl font-semibold leading-tight sm:text-3xl">
           {title}
         </motion.h2>
         <motion.p variants={itemV} className="text-[14.5px] leading-relaxed text-white/55">
           {tagline}
         </motion.p>
 
-        <motion.div variants={cardV} className="mt-2">
+        <motion.div variants={cardV} className="mt-2 min-w-0 overflow-visible">
           {illustration}
         </motion.div>
 
-        <motion.ul variants={listV} className="mt-4 space-y-2.5">
+        <motion.ul variants={listV} className="mt-4 min-w-0 space-y-2.5">
           {bullets.map((b) => (
             <motion.li
               key={b}
               variants={itemV}
-              className="flex items-start gap-2.5 text-[14.5px] leading-relaxed text-white/85"
+              className="flex min-w-0 items-start gap-2.5 text-[14.5px] leading-relaxed text-white/85"
             >
               <span
                 className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full"
@@ -295,13 +297,13 @@ function ServiceCard({
               >
                 <Check size={10} strokeWidth={3} />
               </span>
-              {b}
+              <span className="min-w-0 break-words">{b}</span>
             </motion.li>
           ))}
         </motion.ul>
       </div>
 
-      <div className="mt-8 space-y-2.5">{footer}</div>
+      <div className="mt-8 min-w-0 space-y-2.5">{footer}</div>
     </motion.div>
   );
 }
@@ -312,35 +314,41 @@ function ServiceCard({
 
 export default function Services() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen overflow-x-clip bg-black text-white">
       <Navbar />
 
-      <section className="bg-neutral-900 px-6 py-20 text-center md:px-8 md:py-24">
-        <h1 className="mb-6 text-4xl font-light md:text-5xl">Nossos Serviços</h1>
-        <p className="mx-auto max-w-2xl text-lg text-white/70">
+      <section className="overflow-x-clip bg-neutral-900 px-5 py-20 text-center sm:px-6 md:px-8 md:py-24">
+        <h1 className="mb-6 break-words text-3xl font-light leading-tight sm:text-4xl md:text-5xl">Nossos Serviços</h1>
+        <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
           Conheça nossas soluções pensadas para destacar sua marca, gerar credibilidade e expandir seus negócios de
           forma estratégica.
         </p>
       </section>
 
       {/* ---------- CARDS DE SERVIÇO ---------- */}
-      <section id="servicos" className="scroll-mt-20 bg-neutral-900 px-6 pb-24 md:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3 md:gap-10">
+      <section id="servicos" className="scroll-mt-20 overflow-x-clip bg-neutral-900 px-5 pb-20 sm:px-6 md:px-8 md:pb-24">
+        <div className="mx-auto grid min-w-0 max-w-7xl gap-5 md:grid-cols-3 md:gap-8 lg:gap-10">
           <ServiceCard
             anchorId="design"
             index="01"
             icon={<Palette size={18} />}
             title="Design de Produto"
-            tagline="Uma marca que se destaca à primeira vista, longe do genérico."
+            tagline="Design orgânico e marcante para sua empresa, longe do genérico."
             accent="#F97316"
             illustration={<DesignIllustration />}
             bullets={[
               "Logomarca autoral e exclusiva",
               "Paleta de cores memorável",
-              "Diferenciação de produtos genéricos gerados por IA",
+              "Toda a ciência aplicada ao marketing",
+              "Realidade que se destaca em meio ao conteúdo gerado por IA",
             ]}
             footer={
-              <FooterLink href="/contato">Conversar sobre este serviço</FooterLink>
+              <>
+                <DemoButton target="demo-design" icon={<Sparkles size={16} />}>
+                  Por que design orgânico?
+                </DemoButton>
+                <FooterLink href="/contato">Conversar sobre este serviço</FooterLink>
+              </>
             }
           />
 
@@ -349,22 +357,24 @@ export default function Services() {
             index="02"
             icon={<ShieldCheck size={18} />}
             title="Credibilidade"
-            tagline="Prova social visível bem onde o seu cliente já está procurando."
+            tagline="Tá começando? Não se preocupe! Sabemos exatamente o que preocupa o cliente e como ele valida seu preço."
             accent="#34D399"
             illustration={<CredibilityIllustration />}
             bullets={[
-              "Fotos de altíssima qualidade dos seus produtos e serviços",
-              "Avaliações reais que geram confiança",
-              "Catálogo sempre atualizado",
-              "Presença completa em apps de busca e mapas",
+              "Construímos a prova social do seu negócio",
+              "Catalogamos seus produtos com o melhor do audiovisual",
+              "Fotografias ultraprofissionais",
+              "Filmagens cinematográficas",
+              "Perfil excelente no Google Maps",
+              "Impulsionamento estratégico online",
             ]}
             footer={
               <>
                 <DemoButton target="demo-mapa" icon={<MapPin size={16} />}>
-                  Ver mapa e avaliações
+                  Ver modelos de maps
                 </DemoButton>
                 <DemoButton target="demo-catalogo" icon={<UtensilsCrossed size={16} />}>
-                  Ver cardápio e pedidos
+                  Ver mais
                 </DemoButton>
               </>
             }
@@ -388,25 +398,47 @@ export default function Services() {
         </div>
       </section>
 
+      {/* ---------- DESIGN ORGÂNICO ---------- */}
+      <section id="demo-design" className="scroll-mt-16 overflow-x-clip bg-black px-5 py-20 sm:px-6 md:px-8 md:py-28">
+        <div className="mx-auto min-w-0 max-w-3xl text-center">
+          <span className="text-xs font-medium uppercase tracking-[0.25em] text-[#F97316]">Design orgânico</span>
+          <h2 className="mt-4 break-words text-3xl font-light leading-tight md:text-4xl">
+            Em um mundo cheio de IA, a realidade se destaca
+          </h2>
+          <p className="mt-6 break-words text-base leading-relaxed text-white/70 sm:text-lg">
+            Pesquisas apontam que o consumidor de alto padrão percebe produtos gerados por IA e sente distanciamento
+            e repulsa. Em um mundo onde muitos usam esse recurso para apresentar seus serviços, a realidade se
+            destaca e agrega valor.
+          </p>
+          <p className="mt-4 break-words text-base leading-relaxed text-white/70 sm:text-lg">
+            Fazemos design orgânico e marcante para sua empresa, utilizando toda a ciência aplicada ao marketing.
+          </p>
+          <div className="mx-auto mt-10 max-w-sm">
+            <FooterLink href="/contato">Quero um design autoral</FooterLink>
+          </div>
+        </div>
+        <BackToServices />
+      </section>
+
       {/* ---------- DEMO 1: MAPA E AVALIAÇÕES ---------- */}
-      <section id="demo-mapa" className="scroll-mt-16 bg-black px-6 py-20 md:px-8 md:py-28">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+      <section id="demo-mapa" className="scroll-mt-16 overflow-x-clip bg-neutral-900 px-5 py-20 sm:px-6 md:px-8 md:py-28">
+        <div className="mx-auto grid min-w-0 max-w-7xl items-center gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <div>
-            <h2 className="text-3xl font-light leading-tight md:text-4xl">
+            <h2 className="break-words text-3xl font-light leading-tight md:text-4xl">
               Seu negócio no topo das buscas e no mapa
             </h2>
-            <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/70">
+            <p className="mt-5 max-w-lg break-words text-base leading-relaxed text-white/70 sm:text-lg">
               Quando alguém pesquisa o que você vende, o seu perfil aparece completo, bonito e com a nota que
               conquistou.
             </p>
 
             <ul className="mt-8 space-y-3.5">
               {mapPoints.map((point) => (
-                <li key={point} className="flex items-start gap-3 text-white/85">
+                <li key={point} className="flex min-w-0 items-start gap-3 text-white/85">
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-black">
                     <Check size={12} strokeWidth={3} />
                   </span>
-                  {point}
+                  <span className="min-w-0 break-words">{point}</span>
                 </li>
               ))}
             </ul>
@@ -418,11 +450,11 @@ export default function Services() {
       </section>
 
       {/* ---------- DEMO 2: CARDÁPIO E PEDIDOS ---------- */}
-      <section id="demo-catalogo" className="scroll-mt-16 bg-neutral-900 px-6 py-20 md:px-8 md:py-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-light leading-tight md:text-4xl">Do cardápio direto para a cozinha</h2>
-            <p className="mt-5 text-lg leading-relaxed text-white/70">
+      <section id="demo-catalogo" className="scroll-mt-16 overflow-x-clip bg-black px-5 py-20 sm:px-6 md:px-8 md:py-28">
+        <div className="mx-auto min-w-0 max-w-7xl">
+          <div className="mx-auto min-w-0 max-w-2xl text-center">
+            <h2 className="break-words text-3xl font-light leading-tight md:text-4xl">Do cardápio direto para a cozinha</h2>
+            <p className="mt-5 break-words text-base leading-relaxed text-white/70 sm:text-lg">
               O cliente escolhe entre pratos fotografados em excelente qualidade por profissionais da nossa equipe,
               editados por designers e descritos de forma atraente para o consumidor. O cliente pede em segundos e
               acompanha o preparo pelo celular, diminuindo a carga do trabalhador. Na cozinha, o pedido aparece na
@@ -433,7 +465,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="mt-12 rounded-[32px] bg-[#efeee8] p-4 text-black md:p-8">
+          <div className="mt-10 min-w-0 overflow-hidden rounded-[32px] bg-[#efeee8] p-3 text-black sm:p-4 md:mt-12 md:p-8">
             <ProductCatalog />
           </div>
         </div>

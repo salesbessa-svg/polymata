@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar"
 import HeroBand from "@/components/HeroBand"
 import VideoTextSection from "@/components/VideoTextSection"
 import ServicesShowcase from "@/components/ServicesShowcase"
+import HomeNewsletter from "@/components/newsletter/HomeNewsletter"
 import { RevealText, RevealBlock } from "@/components/Reveal"
 
 export default function Home() {
@@ -15,14 +16,14 @@ export default function Home() {
 
       {/*
         As duas faixas abaixo usam vídeos da pasta /public/video.
-        Troque "servicos" e "comunidade" pelos nomes reais dos arquivos
-        (.mp4 e .webm) que você quer usar — hoje só existe "fachada".
+        "servicos" e "comunidade" 
+        (.mp4 e .webm) hoje só existe "fachada".
       */}
       <VideoTextSection
         videoBase="/video/servicos"
         eyebrow="Sofisticação estratégica"
         title="Seu negócio, apresentado como ele merece"
-        description="Nada de identidade genérica ou perfil incompleto. Cuidamos do design, da credibilidade e da estratégia para que sua marca seja lembrada — não confundida com a concorrência."
+        description="Sua identidade vai ser forte, marcante e única. Cuidamos do design, da credibilidade e da estratégia para que sua marca seja lembrada."
       >
         <Link
           href="/services"
@@ -50,6 +51,8 @@ export default function Home() {
           <ArrowRight size={15} />
         </Link>
       </VideoTextSection>
+
+      <HomeNewsletter />
 
       <section className="bg-neutral-900 px-6 py-24 text-center md:px-8 md:py-32">
         <RevealText
