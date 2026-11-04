@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL } from "@/lib/newsletter-shared-url";
-import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, organizationJsonLd } from "@/lib/seo";
+import { SHARE_IMAGES, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, organizationJsonLd, shareImage } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +38,13 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "Polymata | Ecossistema empresarial em São Paulo",
     description: SITE_DESCRIPTION,
+    images: [shareImage(SHARE_IMAGES.home)],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Polymata | Ecossistema empresarial em São Paulo",
+    description: SITE_DESCRIPTION,
+    images: [shareImage(SHARE_IMAGES.home)],
   },
   other: {
     "geo.region": "BR-SP",

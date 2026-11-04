@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { SHARE_IMAGES, jsonLdScript, pageMetadata, webPageJsonLd } from "@/lib/seo"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import ArchiveGrid from "@/components/newsletter/ArchiveGrid"
@@ -9,10 +10,14 @@ import SignupBand from "@/components/newsletter/SignupBand"
 import { SERIF, categoryColor, editionLabel, formatDate, getAllArticles, getFeatured, toMeta } from "@/lib/newsletter"
 
 export const metadata: Metadata = {
-  title: { absolute: "Newsletter Polymata: gestão, impostos, Google e sistemas para pequenas empresas" },
-  description:
-    "Gestão, impostos, delivery, Google, redes sociais e automação: artigos para donos de pequenas empresas em São Paulo que querem crescer sem aprender errando.",
-  alternates: { canonical: "/newsletter" },
+  ...pageMetadata({
+    title: "Newsletter Polymata: gestão, impostos, Google e sistemas para pequenas empresas",
+    description:
+      "Gestão, impostos, delivery, Google, redes sociais e automação: artigos para donos de pequenas empresas em São Paulo que querem crescer sem aprender errando.",
+    path: "/newsletter",
+    image: SHARE_IMAGES.newsletter,
+    absoluteTitle: true,
+  }),
   keywords: [
     "newsletter para empresários",
     "dicas para pequenas empresas",
@@ -21,12 +26,6 @@ export const metadata: Metadata = {
     "como aumentar as vendas",
     "empreendedorismo São Paulo",
   ],
-  openGraph: {
-    title: "Newsletter Polymata: aprenda antes de errar",
-    description: "Toda semana, um problema real de quem toca uma pequena empresa.",
-    type: "website",
-    locale: "pt_BR",
-  },
 }
 
 export default function Newsletter() {
@@ -40,6 +39,20 @@ export default function Newsletter() {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          webPageJsonLd({
+            path: "/newsletter",
+            name: "Newsletter Polymata: gestão, impostos, Google e sistemas para pequenas empresas",
+            description:
+              "Artigos para donos de pequenas empresas em São Paulo sobre gestão, impostos, delivery, Google, redes sociais, automação e imagens melhores para a empresa.",
+            image: SHARE_IMAGES.newsletter,
+            breadcrumb: "Newsletter",
+            type: "CollectionPage",
+          }),
+        )}
+      />
       {/* ---------- CABEÇALHO ---------- */}
       <header className="px-5 pt-28 sm:px-6 md:px-8 md:pt-32">
         <div className="mx-auto max-w-6xl">

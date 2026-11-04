@@ -4,6 +4,7 @@
    (metadados e dados estruturados schema.org).
 ========================================================= */
 
+import type { Metadata } from "next"
 import { SITE_URL } from "./newsletter-shared-url"
 
 export const SITE_NAME = "Polymata"
@@ -60,7 +61,7 @@ export function organizationJsonLd() {
         legalName: SITE_NAME,
         url: SITE_URL,
         logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png`, width: 512, height: 512 },
-        image: `${SITE_URL}/polymata-logo.png`,
+        image: [`${SITE_URL}/compartilhar/polymata-ecossistema-empresarial.png`, `${SITE_URL}/polymata-logo.png`],
         description: SITE_DESCRIPTION,
         disambiguatingDescription:
           "O nome vem de polímata: a pessoa cujo conhecimento abrange muitas áreas, como Leonardo da Vinci, Fausto Verancio e Santos Dumont. A Polymata une várias especialidades para resolver os problemas de uma empresa por inteiro, não apenas o design.",
@@ -115,4 +116,130 @@ export function organizationJsonLd() {
       },
     ],
   }
+}
+
+/* =========================================================
+   IMAGENS DE COMPARTILHAMENTO (og:image) E METADADOS POR PÁGINA
+   As imagens ficam em /public/compartilhar (1200 × 630 px).
+========================================================= */
+
+
+export type ShareImage = { path: string; alt: string }
+
+export const SHARE_IMAGES = {
+  home: {
+    path: "/compartilhar/polymata-ecossistema-empresarial.png",
+    alt: "Polymata, ecossistema empresarial em São Paulo: sites, sistemas, imagens melhores para a empresa, gestão e rede de empresários.",
+  },
+  servicos: {
+    path: "/compartilhar/polymata-servicos.png",
+    alt: "Serviços Polymata: sites e sistemas, automação, fotografia e vídeo, Google Maps, identidade visual e planejamento tributário.",
+  },
+  rede: {
+    path: "/compartilhar/polymata-rede-empresarial.png",
+    alt: "Rede empresarial Polymata: networking, comunidade de fornecedores e contratantes, encontros e workshops.",
+  },
+  contato: {
+    path: "/compartilhar/polymata-contato.png",
+    alt: "Fale com a Polymata pelo WhatsApp (11) 94037-8289 ou pelo e-mail polymata.br@gmail.com.",
+  },
+  newsletter: {
+    path: "/compartilhar/polymata-newsletter.png",
+    alt: "Newsletter Polymata: gestão, impostos, delivery, Google, redes sociais e automação para pequenas empresas.",
+  },
+} satisfies Record<string, ShareImage>
+
+export function shareImage(img: ShareImage) {
+  return { url: img.path, secureUrl: `${SITE_URL}${img.path}`, width: 1200, height: 630, alt: img.alt, type: "image/png" }
+}
+
+/** Título, descrição, link oficial e imagem de compartilhamento de uma página. */
+export function pageMetadata({
+  title,
+  description,
+  path,
+  image,
+  absoluteTitle = false,
+}: {
+  title: string
+  description: string
+  path: string
+  image: ShareImage
+  absoluteTitle?: boolean
+}): Metadata {
+  const fullTitle = absoluteTitle ? title : `${title} | ${SITE_NAME}`
+  const img = shareImage(image)
+  return {
+    title: absoluteTitle ? { absolute: title } : title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      siteName: SITE_NAME,
+      locale: "pt_BR",
+      url: path,
+      title: fullTitle,
+      description,
+      images: [img],
+    },
+    twitter: { card: "summary_large_image", title: fullTitle, description, images: [img] },
+  }
+}
+
+/* =========================================================
+   FICHA DE CADA PÁGINA PARA O GOOGLE (WebPage + trilha)
+   Invisível na tela: descreve a página, a imagem principal
+   e onde ela fica dentro do site.
+========================================================= */
+
+export function webPageJsonLd({
+  path,
+  name,
+  description,
+  image,
+  breadcrumb,
+  type = "WebPage",
+}: {
+  path: string
+  name: string
+  description: string
+  image: ShareImage
+  breadcrumb?: string
+  type?: "WebPage" | "CollectionPage" | "ContactPage" | "AboutPage"
+}) {
+  const url = `${SITE_URL}${path === "/" ? "" : path}`
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": type,
+      "@id": `${url}/#webpage`,
+      url,
+      name,
+      description,
+      inLanguage: "pt-BR",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${SITE_URL}/#organization` },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}${image.path}`,
+        width: 1200,
+        height: 630,
+        caption: image.alt,
+      },
+    },
+  ]
+  if (breadcrumb) {
+    graph.push({
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Início", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: breadcrumb, item: url },
+      ],
+    })
+  }
+  return { "@context": "https://schema.org", "@graph": graph }
+}
+
+/** Script invisível com a ficha da página. */
+export function jsonLdScript(data: unknown) {
+  return { __html: JSON.stringify(data) }
 }

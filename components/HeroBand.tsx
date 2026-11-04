@@ -16,6 +16,8 @@ export default function HeroBand() {
         loop
         playsInline
         className="absolute w-full h-full object-cover"
+        aria-label="Filmagem gastronômica: pratos sendo finalizados e servidos em restaurante"
+        title="Filmagem gastronômica Polymata"
       >
 
         <source src="/video/filmagem-gastronomica-pratos.webm" type="video/webm" />
