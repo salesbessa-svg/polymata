@@ -18,8 +18,8 @@ export default function HeroBand() {
         className="absolute w-full h-full object-cover"
       >
 
-        <source src="/video/fachada.webm" type="video/webm" />
-        <source src="/video/fachada.mp4" type="video/mp4" />
+        <source src="/video/filmagem-gastronomica-pratos.webm" type="video/webm" />
+        <source src="/video/filmagem-gastronomica-pratos.mp4" type="video/mp4" />
 
       </video>
 

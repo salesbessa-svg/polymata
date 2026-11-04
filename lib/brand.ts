@@ -2,14 +2,14 @@
 
 /**
  * Arquivos da logo em /public:
- *  logo.png / logo-p.png ............ traço preto, para fundos claros
- *  logo-claro.png / logo-claro-p.png  traço branco, para fundos escuros
- * Os arquivos "-p" são versões pequenas (menu e rodapé).
+ *  polymata-logo.png / polymata-logo-pequeno.png ................ traço preto, para fundos claros
+ *  polymata-logo-branco.png / polymata-logo-branco-pequeno.png .. traço branco, para fundos escuros
+ * As versões "-pequeno" são usadas no menu e no rodapé.
  * O original enviado está em /logo.png, na raiz do projeto.
  */
 export function logoSrc(background: "dark" | "light", size: number) {
-  const name = background === "dark" ? "logo-claro" : "logo"
-  return `/${name}${size <= 110 ? "-p" : ""}.png`
+  const name = background === "dark" ? "polymata-logo-branco" : "polymata-logo"
+  return `/${name}${size <= 110 ? "-pequeno" : ""}.png`
 }
 
 /** Proporção da logo (altura / largura). */

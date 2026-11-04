@@ -5,7 +5,13 @@ import HeroBand from "@/components/HeroBand"
 import VideoTextSection from "@/components/VideoTextSection"
 import ServicesShowcase from "@/components/ServicesShowcase"
 import HomeNewsletter from "@/components/newsletter/HomeNewsletter"
+import type { Metadata } from "next"
 import { RevealText, RevealBlock } from "@/components/Reveal"
+
+export const metadata: Metadata = {
+  title: { absolute: "Polymata | Sites, sistemas, gestão e rede empresarial em São Paulo" },
+  alternates: { canonical: "/" },
+}
 
 export default function Home() {
   return (
@@ -17,10 +23,10 @@ export default function Home() {
       {/*
         As duas faixas abaixo usam vídeos da pasta /public/video.
         "servicos" e "comunidade" 
-        (.mp4 e .webm) hoje só existe "fachada".
+        (.mp4 e .webm) hoje existem "filmagem-gastronomica-pratos" e "video-ambiente-restaurante".
       */}
       <VideoTextSection
-        videoBase="/video/servicos"
+        videoBase="/video/video-ambiente-restaurante"
         eyebrow="Sofisticação estratégica"
         title="Seu negócio, apresentado como ele merece"
         description="Sua identidade vai ser forte, marcante e única. Cuidamos do design, da credibilidade e da estratégia para que sua marca seja lembrada."

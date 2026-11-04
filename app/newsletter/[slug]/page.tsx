@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticle(slug)
   if (!article) return {}
   return {
-    title: `${article.title} | Newsletter Polymata`,
+    title: { absolute: `${article.title} | Polymata` },
     description: article.description,
     keywords: article.keywords,
     alternates: { canonical: `/newsletter/${article.slug}` },
@@ -98,7 +98,7 @@ export default async function ArticlePage({ params }: Props) {
         wordCount: article.wordCount,
         mainEntityOfPage: url,
         author: { "@type": "Organization", name: "Polymata", url: SITE_URL },
-        publisher: { "@type": "Organization", name: "Polymata", url: SITE_URL },
+        publisher: { "@id": `${SITE_URL}/#organization` },
       },
       {
         "@type": "BreadcrumbList",

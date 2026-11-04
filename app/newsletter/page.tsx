@@ -9,7 +9,7 @@ import SignupBand from "@/components/newsletter/SignupBand"
 import { SERIF, categoryColor, editionLabel, formatDate, getAllArticles, getFeatured, toMeta } from "@/lib/newsletter"
 
 export const metadata: Metadata = {
-  title: "Newsletter para pequenos empresários | Polymata",
+  title: { absolute: "Newsletter Polymata: gestão, impostos, Google e sistemas para pequenas empresas" },
   description:
     "Gestão, impostos, delivery, Google, redes sociais e automação: artigos para donos de pequenas empresas em São Paulo que querem crescer sem aprender errando.",
   alternates: { canonical: "/newsletter" },
