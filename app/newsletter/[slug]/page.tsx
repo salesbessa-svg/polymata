@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticle(slug)
   if (!article) return {}
   return {
-    title: `${article.title} | Newsletter Polymata`,
+    title: { absolute: `${article.title} | Polymata` },
     description: article.description,
     keywords: article.keywords,
     alternates: { canonical: `/newsletter/${article.slug}` },
@@ -44,6 +44,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: article.date,
       section: article.category,
       tags: article.keywords,
+      url: `/newsletter/${article.slug}`,
+      siteName: "Polymata",
+      images: [
+        {
+          url: `/newsletter/${article.slug}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: `${article.title}. Newsletter Polymata`,
+          type: "image/png",
+        },
+      ],
+      authors: ["Polymata"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.description,
+      images: [`/newsletter/${article.slug}/opengraph-image`],
     },
   }
 }
@@ -97,8 +115,9 @@ export default async function ArticlePage({ params }: Props) {
         keywords: article.keywords.join(", "),
         wordCount: article.wordCount,
         mainEntityOfPage: url,
+        image: [`${url}/opengraph-image`],
         author: { "@type": "Organization", name: "Polymata", url: SITE_URL },
-        publisher: { "@type": "Organization", name: "Polymata", url: SITE_URL },
+        publisher: { "@id": `${SITE_URL}/#organization` },
       },
       {
         "@type": "BreadcrumbList",

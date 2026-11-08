@@ -42,8 +42,8 @@ const pillars = [
   {
     icon: Landmark,
     accent: "#60A5FA",
-    title: "Planejamento Tributário",
-    text: "Analisamos onde você perde dinheiro e mostramos como reduzir os impostos. Diminuímos custos de operação como água, luz e ingredientes, e enxugamos onde mais vaza dinheiro da sua receita sem que você perceba.",
+    title: "Estratégia Tributária",
+    text: "Analisamos onde você perde dinheiro e sugerimos estratégias de elisão fiscal, acordos e contratos para reduzir os impostos dentro da lei. O planejamento formal, a contabilidade e a parte jurídica ficam com contadores e advogados parceiros da rede. Também diminuímos custos de operação como água, luz e ingredientes, e enxugamos onde mais vaza dinheiro da sua receita sem que você perceba.",
   },
   {
     icon: Coins,

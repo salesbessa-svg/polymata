@@ -5,11 +5,32 @@ import HeroBand from "@/components/HeroBand"
 import VideoTextSection from "@/components/VideoTextSection"
 import ServicesShowcase from "@/components/ServicesShowcase"
 import HomeNewsletter from "@/components/newsletter/HomeNewsletter"
+import type { Metadata } from "next"
+import { SHARE_IMAGES, SITE_DESCRIPTION, jsonLdScript, pageMetadata, webPageJsonLd } from "@/lib/seo"
 import { RevealText, RevealBlock } from "@/components/Reveal"
+
+export const metadata: Metadata = pageMetadata({
+  title: "Polymata | Sites, sistemas, gestão e rede empresarial em São Paulo",
+  description: SITE_DESCRIPTION,
+  path: "/",
+  image: SHARE_IMAGES.home,
+  absoluteTitle: true,
+})
 
 export default function Home() {
   return (
     <main className="bg-black text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          webPageJsonLd({
+            path: "/",
+            name: "Polymata | Sites, sistemas, gestão e rede empresarial em São Paulo",
+            description: SITE_DESCRIPTION,
+            image: SHARE_IMAGES.home,
+          }),
+        )}
+      />
       <Navbar />
 
       <HeroBand />
@@ -17,10 +38,11 @@ export default function Home() {
       {/*
         As duas faixas abaixo usam vídeos da pasta /public/video.
         "servicos" e "comunidade" 
-        (.mp4 e .webm) hoje só existe "fachada".
+        (.mp4 e .webm) hoje existem "filmagem-gastronomica-pratos" e "video-ambiente-restaurante".
       */}
       <VideoTextSection
-        videoBase="/video/servicos"
+        videoBase="/video/video-ambiente-restaurante"
+        videoLabel="Ambiente de restaurante com pratos, vinho e mesa posta"
         eyebrow="Sofisticação estratégica"
         title="Seu negócio, apresentado como ele merece"
         description="Sua identidade vai ser forte, marcante e única. Cuidamos do design, da credibilidade e da estratégia para que sua marca seja lembrada."

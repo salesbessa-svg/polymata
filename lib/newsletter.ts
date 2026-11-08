@@ -12,7 +12,7 @@ export * from "./newsletter-shared"
 
 const DIR = path.join(process.cwd(), "content", "newsletter")
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://polymata-ozmv.vercel.app").replace(/\/$/, "")
+export { SITE_URL } from "./newsletter-shared-url"
 
 export type Block =
   | { type: "h2"; text: string; id: string }

@@ -4,7 +4,7 @@ subtitulo: Quem prova a sua comida volta. O problema é convencer quem ainda nã
 descricao: Dark kitchen com poucos pedidos no iFood? Entenda por que cozinhas de delivery com comida boa parecem amadoras e o que trava o crescimento.
 categoria: Restaurantes & Delivery
 data: 2026-11-03
-destaque: sim
+destaque: não
 palavras-chave: dark kitchen, cozinha fantasma, como divulgar dark kitchen, como aumentar pedidos no iFood, como vender mais no iFood, restaurante delivery, delivery de comida em São Paulo, fotos para iFood, cardápio para delivery, marca para restaurante delivery
 chamada: Sua cozinha merece parecer tão boa quanto é. A Polymata cuida da marca, das fotografias e da presença online da sua dark kitchen, para o cliente confiar antes do primeiro pedido.
 ---
