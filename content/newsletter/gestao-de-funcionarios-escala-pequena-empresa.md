@@ -35,7 +35,7 @@ Montar uma boa escala parece simples até você tentar. É preciso conciliar, ao
 - Férias, atestados e imprevistos
 - As preferências e a vida pessoal de cada funcionário
 
-Escolher entre modelos como 6x1, 5x2 ou 12x36 também não é só uma questão de preferência. Cada modelo tem exigências legais, impactos no custo e efeitos diferentes no cansaço da equipe, e o tema da jornada de trabalho tem estado no centro do debate nacional, o que exige atenção a possíveis mudanças.
+Escolher entre modelos como 6x1, 5x2 ou 12x36 também não é só uma questão de preferência. Cada modelo tem exigências legais, impactos no custo e efeitos diferentes no cansaço da equipe, e, com a Emenda Constitucional 141/2026, que acabou com a escala 6x1, o modelo 5x2 e a jornada de 42 horas passam a ser a regra.
 
 !> A partir de 20 funcionários em um estabelecimento, o registro de ponto passa a ser obrigatório pela legislação trabalhista. Mas mesmo empresas menores se protegem quando registram jornada de forma organizada: em caso de disputa trabalhista, a falta de registros costuma pesar contra o empregador.
 

@@ -20,8 +20,9 @@ export async function POST(req: Request) {
   }
 
   const { error } = await resend.emails.send({
-    from: "onboarding@resend.dev",
+    from: process.env.EMAIL_FROM ?? "Polymata <onboarding@resend.dev>",
     to: process.env.EMAIL_TO!,
+    replyTo: data.email ? String(data.email).slice(0, 200) : undefined,
     subject: "Nova inscrição na newsletter - Polymata",
     html: `
       <h2>Nova inscrição na newsletter</h2>
