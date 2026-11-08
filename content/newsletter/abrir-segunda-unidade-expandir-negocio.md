@@ -35,7 +35,7 @@ Uma segunda unidade não é apenas um novo ponto. É a prova de que o seu negóc
 - **Diagnóstico de prontidão para expansão**, apontando o que já está pronto e o que precisa ser feito antes
 - **Padronização completa**: fichas técnicas, manuais, treinamentos em vídeo e rotinas
 - **Sistemas integrados** de pedidos, estoque e gestão para várias unidades
-- **Planejamento tributário** para a nova fase, com projeção de cenários
+- **Análise e estratégia tributária** para a nova fase, com projeção de cenários e planejamento formal feito por contadores e advogados parceiros
 - **Fortalecimento da marca** e presença no Google para o novo endereço, antes mesmo da inauguração
 - **Conexões na rede Polymata** com fornecedores, bancos e parceiros para viabilizar o investimento
 

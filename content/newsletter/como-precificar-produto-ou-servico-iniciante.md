@@ -72,7 +72,7 @@ Se você está nesta fase, não precisa decidir sozinho. Conte para nós em que 
 ## Como a Polymata resolve
 
 - Análise do seu momento de empreendedor de primeira viagem, com diagnóstico e plano de próximos passos.
-- Planejamento tributário e cálculo de preço com custos, impostos e margem reais.
+- Análise de preço com custos, impostos e margem reais, e estratégias tributárias validadas com contadores parceiros.
 - Fotografia de produtos e vídeos que aumentam o valor percebido.
 - Identidade visual, site e catálogo que sustentam um posicionamento premium.
 - Sistemas que mostram a margem de cada produto e serviço.

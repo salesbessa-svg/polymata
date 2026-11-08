@@ -53,7 +53,7 @@ Na psicologia financeira, isso se chama **contabilidade mental**: tratamos o din
 
 ## Como a Polymata resolve
 
-- Planejamento tributário e elisão fiscal para equilibrar pró-labore e lucros dentro da lei.
+- Análise e estratégias de elisão fiscal para equilibrar pró-labore e lucros dentro da lei, com contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Sistemas de gestão que separam receitas, despesas e retiradas automaticamente.
 - Painéis simples para você ver, todo mês, quanto a empresa realmente lucra.
 - Conexão com contadores do nosso ecossistema empresarial.

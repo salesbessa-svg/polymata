@@ -10,7 +10,7 @@ import { SITE_URL } from "./newsletter-shared-url"
 export const SITE_NAME = "Polymata"
 
 export const SITE_DESCRIPTION =
-  "Polymata é um ecossistema empresarial brasileiro que reúne em um só lugar o que um negócio precisa para crescer: sites e sistemas para restaurantes, clínicas e escritórios de advocacia, automação, imagens melhores para a empresa com fotografia e vídeo profissionais, catálogo digital, presença no Google, planejamento tributário, redução de custos e uma rede de networking para empresas do Estado de São Paulo."
+  "Polymata é um ecossistema empresarial brasileiro que reúne em um só lugar o que um negócio precisa para crescer: sites e sistemas para restaurantes, clínicas e escritórios de advocacia, automação, imagens melhores para a empresa com fotografia e vídeo profissionais, catálogo digital, presença no Google, análise e estratégias de elisão fiscal com contadores e advogados parceiros, redução de custos e uma rede de networking para empresas do Estado de São Paulo."
 
 export const SITE_KEYWORDS = [
   "Polymata",
@@ -45,7 +45,7 @@ const SERVICES = [
   "Perfil da Empresa no Google e posicionamento nas buscas",
   "Impulsionamento estratégico online",
   "Identidade visual e design de marca",
-  "Planejamento tributário e elisão fiscal",
+  "Análise e estratégias de elisão fiscal, acordos e contratos (planejamento formal, contabilidade e jurídico com parceiros)",
   "Redução de custos operacionais",
   "Networking empresarial, comunidade e workshops",
 ]
@@ -133,7 +133,7 @@ export const SHARE_IMAGES = {
   },
   servicos: {
     path: "/compartilhar/polymata-servicos.png",
-    alt: "Serviços Polymata: sites e sistemas, automação, fotografia e vídeo, Google Maps, identidade visual e planejamento tributário.",
+    alt: "Serviços Polymata: sites e sistemas, automação, fotografia e vídeo, Google Maps, identidade visual e estratégia tributária.",
   },
   rede: {
     path: "/compartilhar/polymata-rede-empresarial.png",

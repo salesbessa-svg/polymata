@@ -61,5 +61,5 @@ A **ficha técnica** descreve cada prato com ingredientes, quantidades exatas, r
 - Sistemas para restaurantes com estoque, ficha técnica e CMV calculados automaticamente.
 - Fotografia gastronômica que serve tanto ao cardápio quanto à padronização da montagem.
 - Engenharia de cardápio para identificar pratos que vendem muito e lucram pouco.
-- Planejamento tributário e de custos para proteger a margem.
+- Análise de custos e estratégias tributárias para proteger a margem, com contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Conexão com fornecedores e outros restaurantes do nosso ecossistema empresarial.

@@ -63,6 +63,6 @@ Na psicologia, chamamos de **viés de autoatribuição** a tendência de cada pe
 ## Como a Polymata resolve
 
 - Conexão com advogados empresariais do nosso ecossistema para acordo de sócios e sucessão.
-- Planejamento tributário da sociedade, do pró-labore e da distribuição de lucros.
+- Análise e estratégias de elisão fiscal para a sociedade, o pró-labore e a distribuição de lucros, com acordos e contratos formalizados por advogados e contadores parceiros.
 - Sistemas e painéis de gestão para os sócios decidirem com base em números.
 - Encontros e networking com outros empresários que já passaram pelas mesmas fases.

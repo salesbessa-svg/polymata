@@ -72,6 +72,6 @@ Se você está nesta fase, não precisa decidir sozinho. Conte para nós em que 
 
 - Análise do seu momento de empreendedor de primeira viagem, com diagnóstico e plano de próximos passos.
 - Planejamento financeiro com investimento, capital de giro e ponto de equilíbrio.
-- Planejamento tributário para escolher o regime certo desde a abertura.
+- Análise e sugestões de estratégia tributária para escolher o formato certo de empresa desde a abertura, com contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Sites, catálogos e fotos com investimento proporcional ao momento do negócio.
 - Conexão com contadores e parceiros financeiros do nosso ecossistema empresarial.

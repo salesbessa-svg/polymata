@@ -60,7 +60,7 @@ Em economia comportamental, chamamos de **aversão à perda** a tendência de se
 
 ## Como a Polymata resolve
 
-- Planejamento tributário e elisão fiscal com simulações do impacto do split payment no seu fluxo de caixa.
+- Análise e simulações do impacto do split payment no seu fluxo de caixa, com estratégias de elisão fiscal e contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Sistemas de gestão preparados para conciliar recebimentos já divididos e controlar créditos.
 - Revisão de precificação para proteger a margem na transição da reforma.
 - Conexão com contadores e consultores financeiros do nosso ecossistema empresarial.

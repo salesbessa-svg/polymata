@@ -55,7 +55,7 @@ Monte um calendário com o histórico de vendas mês a mês dos últimos anos. V
 
 ## Como a Polymata resolve
 
-- Planejamento financeiro e tributário anual com previsão de sazonalidade.
+- Planejamento financeiro anual com previsão de sazonalidade e estratégias tributárias validadas com contadores parceiros.
 - Sites, catálogos e campanhas para venda antecipada de pacotes e vales.
 - Produção de fotos e vídeos no período de baixa, para chegar forte à alta.
 - Sistemas que mostram o histórico de vendas e ajudam a planejar compras e escalas.

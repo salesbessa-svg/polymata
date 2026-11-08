@@ -33,7 +33,7 @@ Muita empresa marcou uma opção porque "o contador mandou", porque "todo mundo 
 ## Como a Polymata resolve
 
 - **Simulação dos dois cenários** com o seu faturamento, sua margem e o perfil dos seus clientes
-- **Planejamento tributário completo** para 2027, olhando regime, enquadramento e elisão fiscal dentro da lei
+- **Análise e estratégias de elisão fiscal** para 2027, olhando regime e enquadramento dentro da lei, com o planejamento formal feito por contadores e advogados parceiros
 - **Revisão dos custos operacionais** que andam junto com os impostos: energia, insumos e contratos
 - **Sistemas e notas organizados** para quem for ao regime regular conseguir controlar créditos sem erro
 - **Workshops da rede Polymata** sobre a reforma, com especialistas e empresários discutindo casos reais

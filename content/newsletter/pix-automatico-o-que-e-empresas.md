@@ -70,5 +70,5 @@ Isso não é truque. É reduzir o esforço de quem já decidiu ficar. E, para o 
 - Sistemas para restaurantes, médicos e advogados com cobrança recorrente integrada e conciliação automática.
 - Páginas de adesão e mensagens de autorização claras, com a identidade da sua marca, para o cliente aceitar sem desconfiança.
 - Automação de avisos de falha de pagamento pelo WhatsApp, sem constrangimento.
-- Planejamento tributário e de fluxo de caixa para a receita recorrente render mais.
+- Análise de fluxo de caixa e estratégias tributárias para a receita recorrente render mais, com contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Conexão com parceiros financeiros do nosso ecossistema empresarial para comparar tarifas.

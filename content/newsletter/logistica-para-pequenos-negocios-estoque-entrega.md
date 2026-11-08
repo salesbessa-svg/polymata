@@ -78,5 +78,5 @@ Se você está nesta fase, não precisa decidir sozinho. Conte para nós em que 
 - Análise do seu momento de empreendedor de primeira viagem, com diagnóstico e plano de próximos passos.
 - Sistemas de gestão com estoque, ponto de pedido e curva ABC automáticos.
 - Integração entre vendas, estoque e entregas.
-- Planejamento tributário na escolha de fornecedores.
+- Análise tributária na escolha de fornecedores, com contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Conexão com fornecedores e operadores logísticos do nosso ecossistema.

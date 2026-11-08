@@ -34,7 +34,7 @@ Antes de buscar mais crédito, vale olhar para dentro. Em muitas empresas, o cai
 
 - **Diagnóstico financeiro** com fluxo de caixa real, prazos de recebimento e de pagamento
 - **Régua de cobrança automática** para reduzir atrasos sem desgastar o cliente
-- **Planejamento tributário** para encontrar, dentro da lei, o imposto pago a mais
+- **Análise tributária** para encontrar, dentro da lei, o imposto pago a mais, com contadores e advogados parceiros cuidando da parte formal
 - **Redução de custos operacionais** em energia, insumos e contratos
 - **Automação de processos** para fazer mais com a mesma equipe
 - **Rede Polymata:** acesso facilitado a bancos e parceiros para buscar crédito mais adequado quando ele for necessário

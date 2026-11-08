@@ -73,4 +73,4 @@ Se você está nesta fase, não precisa decidir sozinho. Conte para nós em que 
 - Conversas estratégicas para avaliar a ideia, o público e o modelo de negócio.
 - Páginas de teste e pré-venda para medir o interesse real antes do investimento.
 - Conexão com empresários experientes do nosso ecossistema que já trilharam o caminho.
-- Planejamento tributário desde o início, para escolher o formato certo de empresa.
+- Análise e sugestões de estratégia tributária desde o início, para escolher o formato certo de empresa, com contadores e advogados parceiros responsáveis pelo planejamento formal.

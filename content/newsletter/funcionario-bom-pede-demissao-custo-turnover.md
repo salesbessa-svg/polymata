@@ -66,5 +66,5 @@ Na psicologia, existe o conceito de **contrato psicológico**: as expectativas n
 - Sistemas e automações que reduzem tarefas repetitivas e retrabalho da equipe.
 - Processos documentados que facilitam o treinamento de novos funcionários.
 - Conexão com especialistas em gestão de pessoas e direito do trabalho do nosso ecossistema.
-- Planejamento tributário de benefícios e participação nos resultados.
+- Análise e estratégias tributárias para benefícios e participação nos resultados, com contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Encontros com outros empresários para trocar práticas de liderança.

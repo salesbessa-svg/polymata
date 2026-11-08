@@ -73,6 +73,6 @@ Se você está nesta fase, não precisa decidir sozinho. Conte para nós em que 
 
 - Análise do seu momento de empreendedor de primeira viagem, com diagnóstico e plano de próximos passos.
 - Conexão com advogados trabalhistas e contadores do nosso ecossistema.
-- Planejamento tributário da folha e da estrutura de contratação.
+- Análise e estratégias tributárias para a folha e a estrutura de contratação, com contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Sistemas de escala, ponto e gestão de equipe.
 - Processos documentados que facilitam treinar quem chega.

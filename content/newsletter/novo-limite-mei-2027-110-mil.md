@@ -56,7 +56,7 @@ Em psicologia econômica, existe um fenômeno chamado **viés do presente**: val
 
 ## Como a Polymata resolve
 
-- Planejamento tributário e elisão fiscal para escolher o regime mais vantajoso, dentro da lei, antes de cada degrau de crescimento.
+- Análise e estratégias de elisão fiscal para escolher o regime mais vantajoso, dentro da lei, antes de cada degrau de crescimento, com contadores e advogados parceiros responsáveis pelo planejamento formal.
 - Sistemas de gestão simples para controlar vendas, notas e margem sem planilha caótica.
 - Sites e catálogo digital de alta qualidade para atrair os clientes que o novo limite permite atender.
 - Fotografia de produtos e vídeos que aumentam o valor percebido e permitem cobrar melhor.

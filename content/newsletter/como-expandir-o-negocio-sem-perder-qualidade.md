@@ -62,7 +62,7 @@ Mas muitos negócios descobrem, no crescimento, um problema que estava escondido
 
 Este artigo faz parte da **Jornada do Novo Empreendedor**, a série da Polymata para quem está tirando o primeiro negócio do papel. Esta é a etapa 12 de 12: expandir com estrutura.
 
-Crescer é o sonho, e também a fase de maior risco. A Polymata analisa se o seu negócio está pronto, estrutura processos, sistemas e identidade para várias unidades e organiza a parte tributária e societária. Acompanhamos empreendedores desde a primeira ideia até a expansão, porque cada empresa que cresce de forma saudável gera mais empregos e mais oportunidades.
+Crescer é o sonho, e também a fase de maior risco. A Polymata analisa se o seu negócio está pronto, estrutura processos, sistemas e identidade para várias unidades e sugere as estratégias tributárias, enquanto contadores e advogados parceiros organizam a parte formal, tributária e societária. Acompanhamos empreendedores desde a primeira ideia até a expansão, porque cada empresa que cresce de forma saudável gera mais empregos e mais oportunidades.
 
 > Na Polymata, o sucesso de um empreendedor de primeira viagem não é só um resultado comercial. É um compromisso social.
 
@@ -76,5 +76,5 @@ Se você está nesta fase, não precisa decidir sozinho. Conte para nós em que 
 - Sistemas de gestão para acompanhar várias unidades em tempo real.
 - Processos documentados, fichas técnicas e materiais de treinamento.
 - Identidade visual, fotografia e catálogo padronizados para todas as unidades.
-- Planejamento tributário e societário para a nova estrutura.
+- Análise e sugestões de estratégia tributária para a nova estrutura, com contadores e advogados parceiros responsáveis pela parte formal, tributária e societária.
 - Conexão com empresários do nosso ecossistema que já expandiram negócios.
