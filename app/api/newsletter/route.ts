@@ -1,6 +1,10 @@
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+/** Criado só na hora do envio: assim a falta da chave vira uma mensagem clara, e não um erro que derruba a rota. */
+function getResend() {
+  const key = process.env.RESEND_API_KEY
+  return key ? new Resend(key) : null
+}
 
 function clean(value: unknown, max = 200) {
   return String(value ?? "")
@@ -19,6 +23,12 @@ export async function POST(req: Request) {
     return Response.json({ ok: false }, { status: 400 })
   }
 
+  const resend = getResend()
+  if (!resend || !process.env.EMAIL_TO) {
+    console.error("Newsletter: RESEND_API_KEY ou EMAIL_TO não configurados na Vercel.")
+    return Response.json({ ok: false }, { status: 500 })
+  }
+
   const { error } = await resend.emails.send({
     from: process.env.EMAIL_FROM ?? "Polymata <onboarding@resend.dev>",
     to: process.env.EMAIL_TO!,
@@ -33,6 +43,9 @@ export async function POST(req: Request) {
     `,
   })
 
-  if (error) return Response.json({ ok: false }, { status: 500 })
+  if (error) {
+    console.error("Newsletter: falha no Resend", error)
+    return Response.json({ ok: false }, { status: 502 })
+  }
   return Response.json({ ok: true })
 }

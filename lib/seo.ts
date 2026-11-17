@@ -10,7 +10,7 @@ import { SITE_URL } from "./newsletter-shared-url"
 export const SITE_NAME = "Polymata"
 
 export const SITE_DESCRIPTION =
-  "Polymata é um ecossistema empresarial brasileiro que reúne em um só lugar o que um negócio precisa para crescer: sites e sistemas para restaurantes, clínicas e escritórios de advocacia, automação, imagens melhores para a empresa com fotografia e vídeo profissionais, catálogo digital, presença no Google, análise e estratégias de elisão fiscal com contadores e advogados parceiros, redução de custos e uma rede de networking para empresas do Estado de São Paulo."
+  "Polymata é um ecossistema empresarial brasileiro que reúne em um só lugar o que um negócio precisa para crescer: sites e sistemas para restaurantes, clínicas e escritórios de advocacia, automação, imagens melhores para a empresa com fotografia e vídeo profissionais, catálogo digital, presença no Google, análise e estratégias de elisão fiscal com contadores e advogados parceiros, redução de custos e uma rede que conecta empresários de diferentes ramos, associações e eventos no Estado de São Paulo."
 
 export const SITE_KEYWORDS = [
   "Polymata",

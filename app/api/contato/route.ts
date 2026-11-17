@@ -1,6 +1,10 @@
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+/** Criado só na hora do envio: assim a falta da chave vira uma mensagem clara, e não um erro que derruba a rota. */
+function getResend() {
+  const key = process.env.RESEND_API_KEY
+  return key ? new Resend(key) : null
+}
 
 /** Remetente: depois de verificar o domínio no Resend, defina EMAIL_FROM na Vercel
  *  (ex.: "Polymata <contato@polymata.com.br>"). Até lá, usa o endereço de teste. */
@@ -35,7 +39,8 @@ export async function POST(req: Request) {
   }
 
   const to = process.env.EMAIL_TO
-  if (!process.env.RESEND_API_KEY || !to) {
+  const resend = getResend()
+  if (!resend || !to) {
     console.error("Contato: RESEND_API_KEY ou EMAIL_TO não configurados na Vercel.")
     return Response.json({ ok: false, error: "Envio indisponível no momento." }, { status: 500 })
   }
