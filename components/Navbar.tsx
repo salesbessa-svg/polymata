@@ -43,6 +43,13 @@ export default function Navbar() {
           </Link>
 
           <Link
+            href="/esportes"
+            className="hover:text-white transition"
+          >
+            ESPORTES
+          </Link>
+
+          <Link
             href="/newsletter"
             className="hover:text-white transition"
           >
@@ -140,6 +147,14 @@ export default function Navbar() {
             className="border-b border-white/10 py-5 text-sm tracking-[0.2em] text-white/80 transition hover:text-white"
           >
             PROJETOS
+          </Link>
+
+          <Link
+            href="/esportes"
+            onClick={() => setIsOpen(false)}
+            className="border-b border-white/10 py-5 text-sm tracking-[0.2em] text-white/80 transition hover:text-white"
+          >
+            ESPORTES
           </Link>
 
           <Link

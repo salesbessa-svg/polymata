@@ -5,6 +5,8 @@ import { RevealText, RevealBlock } from "./Reveal"
 type VideoTextSectionProps = {
   /** ex: "/video/comunidade": o componente busca .webm e .mp4 com esse prefixo */
   videoBase: string
+  /** descrição do vídeo para leitores de tela e para o Google */
+  videoLabel?: string
   eyebrow?: string
   title: string
   description: string
@@ -22,6 +24,7 @@ const alignMap = {
 
 export default function VideoTextSection({
   videoBase,
+  videoLabel,
   eyebrow,
   title,
   description,
@@ -50,6 +53,8 @@ export default function VideoTextSection({
         loop
         playsInline
         preload="metadata"
+        aria-label={videoLabel}
+        title={videoLabel}
         className="
           absolute
           inset-0
