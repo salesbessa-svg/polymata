@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/projetos`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8,
       images: [img(SHARE_IMAGES.rede.path)] },
     { url: `${SITE_URL}/esportes`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8,
+      images: [img(SHARE_IMAGES.esportes.path)] },
+    { url: `${SITE_URL}/esportes/baseball`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8,
       images: [img(SHARE_IMAGES.esportes.path), img("/esportes/cap.png")] },
     { url: `${SITE_URL}/newsletter`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8,
       images: [img(SHARE_IMAGES.newsletter.path)] },

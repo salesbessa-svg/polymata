@@ -6,8 +6,8 @@ import { ESPORTES_FAQ, NICODEMUS_URL } from "./conteudo"
 const PAGE = {
   title: "Baseball no Brasil e baseball universitário | Polymata Esportes e nicodemus",
   description:
-    "Baseball no Brasil e beisebol universitário: conheça o nicodemus (nicodemus.com.br), app brasileiro e gratuito para equipes amadoras e universitárias registrarem treinos, jogos, estatísticas e a evolução de cada atleta.",
-  path: "/esportes",
+    "Baseball no Brasil e beisebol universitário: conheça o nicodemus (nicodemus.com.br), app brasileiro com cadastro gratuito para equipes amadoras, universitárias e profissionais registrarem treinos, jogos, estatísticas e a evolução de cada atleta.",
+  path: "/esportes/baseball",
   image: SHARE_IMAGES.esportes,
 }
 
@@ -31,6 +31,8 @@ export const metadata: Metadata = {
     "nicodemus baseball",
     "nicodemus.com.br",
     "Polymata Esportes",
+    "baseball profissional Brasil",
+    "app de baseball para profissionais",
   ],
 }
 
@@ -45,13 +47,13 @@ const nicodemusJsonLd = {
       url: NICODEMUS_URL,
       image: `${SITE_URL}/esportes/cap.png`,
       description:
-        "App brasileiro de baseball (beisebol) para equipes amadoras e universitárias: treino na gaiola com mapa de zona, súmula de jogo jogada a jogada, perfil do atleta com escala 20–80, agenda e análises da equipe.",
+        "App brasileiro de baseball (beisebol) para equipes amadoras, universitárias e profissionais: treino na gaiola com mapa de zona, súmula de jogo jogada a jogada, perfil do atleta com escala 20–80, agenda e análises da equipe.",
       applicationCategory: "SportsApplication",
       operatingSystem: "Web, Android, iOS (PWA)",
       inLanguage: "pt-BR",
       isAccessibleForFree: true,
-      offers: { "@type": "Offer", price: "0", priceCurrency: "BRL" },
-      audience: { "@type": "Audience", audienceType: "Equipes de baseball amadoras e universitárias no Brasil" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "BRL", description: "Cadastro gratuito" },
+      audience: { "@type": "Audience", audienceType: "Equipes e atletas de baseball amadores, universitários e profissionais no Brasil" },
       about: [
         { "@type": "Thing", name: "Baseball no Brasil" },
         { "@type": "Thing", name: "Baseball universitário" },
@@ -60,8 +62,16 @@ const nicodemusJsonLd = {
       creator: { "@id": `${SITE_URL}/#organization` },
     },
     {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Início", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Esportes", item: `${SITE_URL}/esportes` },
+        { "@type": "ListItem", position: 3, name: "Baseball", item: `${SITE_URL}/esportes/baseball` },
+      ],
+    },
+    {
       "@type": "FAQPage",
-      "@id": `${SITE_URL}/esportes/#faq`,
+      "@id": `${SITE_URL}/esportes/baseball/#faq`,
       mainEntity: ESPORTES_FAQ.map((f) => ({
         "@type": "Question",
         name: f.pergunta,
@@ -82,7 +92,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             name: "Polymata Esportes: baseball no Brasil, baseball universitário e o app nicodemus",
             description: PAGE.description,
             image: PAGE.image,
-            breadcrumb: "Esportes",
           }),
         )}
       />

@@ -51,7 +51,7 @@ const SERVICES = [
   "Análise e estratégias de elisão fiscal, acordos e contratos (planejamento formal, contabilidade e jurídico com parceiros)",
   "Redução de custos operacionais",
   "Networking empresarial, comunidade e workshops",
-  "Polymata Esportes: tecnologia para baseball amador e universitário (app nicodemus)",
+  "Polymata Esportes: tecnologia para baseball amador, universitário e profissional (app nicodemus)",
 ]
 
 export function organizationJsonLd() {

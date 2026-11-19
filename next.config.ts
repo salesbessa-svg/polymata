@@ -6,9 +6,10 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/esporte", destination: "/esportes", permanent: true },
-      { source: "/baseball", destination: "/esportes", permanent: true },
-      { source: "/beisebol", destination: "/esportes", permanent: true },
-      { source: "/nicodemus", destination: "/esportes", permanent: true },
+      { source: "/baseball", destination: "/esportes/baseball", permanent: true },
+      { source: "/beisebol", destination: "/esportes/baseball", permanent: true },
+      { source: "/nicodemus", destination: "/esportes/baseball", permanent: true },
+      { source: "/esportes/beisebol", destination: "/esportes/baseball", permanent: true },
     ]
   },
 };
