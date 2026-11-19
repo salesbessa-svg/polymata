@@ -31,6 +31,9 @@ export const SITE_KEYWORDS = [
   "redução de custos",
   "networking empresarial São Paulo",
   "identidade visual",
+  "baseball no Brasil",
+  "baseball universitário",
+  "nicodemus baseball",
 ]
 
 const SERVICES = [
@@ -48,6 +51,7 @@ const SERVICES = [
   "Análise e estratégias de elisão fiscal, acordos e contratos (planejamento formal, contabilidade e jurídico com parceiros)",
   "Redução de custos operacionais",
   "Networking empresarial, comunidade e workshops",
+  "Polymata Esportes: tecnologia para baseball amador e universitário (app nicodemus)",
 ]
 
 export function organizationJsonLd() {
@@ -142,6 +146,10 @@ export const SHARE_IMAGES = {
   contato: {
     path: "/compartilhar/polymata-contato.png",
     alt: "Fale com a Polymata pelo WhatsApp (11) 94037-8289 ou pelo e-mail polymata.br@gmail.com.",
+  },
+  esportes: {
+    path: "/compartilhar/polymata-esportes-baseball.png",
+    alt: "Polymata Esportes: baseball no Brasil e na universidade com o app nicodemus baseball.",
   },
   newsletter: {
     path: "/compartilhar/polymata-newsletter.png",
