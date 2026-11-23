@@ -44,7 +44,10 @@ const nicodemusJsonLd = {
       "@id": `${NICODEMUS_URL}/#app`,
       name: "nicodemus",
       alternateName: ["nicodemus baseball", "nicodemus.com.br"],
-      url: NICODEMUS_URL,
+      url: `${NICODEMUS_URL}/`,
+      sameAs: [`${NICODEMUS_URL}/`],
+      disambiguatingDescription:
+        "nicodemus (www.nicodemus.com.br) é um aplicativo de baseball da Polymata Esportes. Não tem relação com Nicodemos, personagem da Bíblia.",
       image: `${SITE_URL}/esportes/cap.png`,
       description:
         "App brasileiro de baseball (beisebol) para equipes amadoras, universitárias e profissionais: treino na gaiola com mapa de zona, súmula de jogo jogada a jogada, perfil do atleta com escala 20–80, agenda e análises da equipe.",

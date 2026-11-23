@@ -1,7 +1,8 @@
 /* Textos compartilhados entre a página /esportes e a ficha
    invisível para o Google (FAQPage), para que digam o mesmo. */
 
-export const NICODEMUS_URL = "https://nicodemus.com.br"
+// endereço oficial (com www): o mesmo @id e a mesma URL da ficha publicada no próprio nicodemus.com.br
+export const NICODEMUS_URL = "https://www.nicodemus.com.br"
 
 export const PIX_NICODEMUS = "polymata.br@gmail.com"
 

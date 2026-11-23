@@ -8,7 +8,8 @@ const nextConfig: NextConfig = {
       { source: "/esporte", destination: "/esportes", permanent: true },
       { source: "/baseball", destination: "/esportes/baseball", permanent: true },
       { source: "/beisebol", destination: "/esportes/baseball", permanent: true },
-      { source: "/nicodemus", destination: "/esportes/baseball", permanent: true },
+      // quem procura o app vai direto para ele
+      { source: "/nicodemus", destination: "https://www.nicodemus.com.br/", permanent: true },
       { source: "/esportes/beisebol", destination: "/esportes/baseball", permanent: true },
     ]
   },
