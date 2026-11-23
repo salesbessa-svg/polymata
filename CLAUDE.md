@@ -67,6 +67,8 @@ Donos e gestores de pequenos e médios negócios locais: lojas, restaurantes, ba
 | `/` | Apresentação da empresa: hero animado, vitrine de serviços, faixas com vídeo e CTA final |
 | `/services` | Detalhe dos serviços com demonstrações reais (mapa com avaliações e cardápio com pedidos) |
 | `/projetos` | Ecossistema: networking, comunidade, fiscal, capitalização, rede fornecedor-consumidor, workshops |
+| `/esportes` | Polymata Esportes: escolha do esporte (hoje, botão Baseball). `/esporte` redireciona para cá |
+| `/esportes/baseball` | Baseball no Brasil (amador, universitário e profissional), card do app nicodemus (leva a www.nicodemus.com.br) e apoio por PIX/equipamentos. `/baseball` e `/beisebol` redirecionam para cá; `/nicodemus` leva direto ao app (www.nicodemus.com.br) |
 | `/contato` | Canal de contato |
 
 Contato direto: botão de WhatsApp fixo, número `+55 11 94037-8289`.

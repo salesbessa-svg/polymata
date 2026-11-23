@@ -81,6 +81,12 @@ export default function QuemEPolymata() {
           estratégia, impostos bem planejados e pessoas certas por perto. Então decidimos juntar tudo isso em um só
           lugar, e em uma rede de empresários que crescem juntos.
         </p>
+        <p className="mb-6">
+          Na prática, o meu papel é ser a ponte. Aproximo empresários de diferentes ramos, associações e eventos, para
+          que cada negócio ganhe parceiros, visibilidade e a confiança que só vem de ser visto e recomendado. Analiso
+          cada empresa e sugiro estratégias para pagar menos impostos dentro da lei, e conto com contadores e
+          advogados capacitados e licenciados para formalizar cada passo com segurança.
+        </p>
 
         <Heading>Em busca de polímatas</Heading>
         <p className="mb-6">

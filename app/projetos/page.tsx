@@ -42,8 +42,8 @@ const pillars = [
   {
     icon: Landmark,
     accent: "#60A5FA",
-    title: "Planejamento Tributário",
-    text: "Analisamos onde você perde dinheiro e mostramos como reduzir os impostos. Diminuímos custos de operação como água, luz e ingredientes, e enxugamos onde mais vaza dinheiro da sua receita sem que você perceba.",
+    title: "Estratégia Tributária",
+    text: "Analisamos onde você perde dinheiro e sugerimos estratégias de elisão fiscal, acordos e contratos para reduzir os impostos dentro da lei. O planejamento formal, a contabilidade e a parte jurídica ficam com contadores e advogados parceiros da rede. Também diminuímos custos de operação como água, luz e ingredientes, e enxugamos onde mais vaza dinheiro da sua receita sem que você perceba.",
   },
   {
     icon: Coins,
@@ -98,7 +98,9 @@ export default function Projetos() {
         <RevealBlock delay={0.15}>
           <p className="mx-auto max-w-2xl text-lg text-white/70">
             Além de construirmos marcas por todo o Estado de São Paulo, fazemos com que cada empresa nova ganhe seu
-            espaço na nossa rede de contatos.
+            espaço na nossa rede de contatos. A Polymata é a ponte entre empresários de diferentes ramos, associações e
+            eventos, para gerar parcerias, prova social e, com profissionais capacitados e licenciados, economia
+            tributária dentro da lei.
           </p>
         </RevealBlock>
       </section>
@@ -142,7 +144,9 @@ export default function Projetos() {
           <RevealBlock delay={0.15}>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
               Possuímos uma rede de contatos com gestores empresariais, associações sociais, associações atléticas,
-              bancos e advogados esperando você entrar nessa.
+              bancos, contadores e advogados esperando você entrar nessa. Nós fazemos a ponte: apresentamos você às
+              pessoas certas e acompanhamos cada conexão, sempre com profissionais habilitados nas áreas que exigem
+              registro, como a contábil e a jurídica.
             </p>
           </RevealBlock>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
